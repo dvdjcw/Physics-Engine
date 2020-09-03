@@ -11,7 +11,9 @@ function setup() {
     world = engine.world;
 object = Bodies.rectangle(200,100,50,50);
 World.add(world,object);
-console.log(object);    
+console.log(object.type);
+console.log(object.position.x);
+console.log(object.position.y);    
 }
   
   function draw() {
