@@ -10,7 +10,8 @@ function setup() {
     engine = Engine.create();
     world = engine.world;
 object = Bodies.rectangle(200,100,50,50);
-World.add(world,object);    
+World.add(world,object);
+console.log(object);    
 }
   
   function draw() {
