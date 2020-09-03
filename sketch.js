@@ -3,21 +3,26 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 
 var engine,world;
-var object;
+var ground;
 
 function setup() {
     createCanvas(400,400);
     engine = Engine.create();
     world = engine.world;
-object = Bodies.rectangle(200,100,50,50);
-World.add(world,object);
-console.log(object.type);
-console.log(object.position.x);
-console.log(object.position.y);    
+
+    var ground_options
+    {
+        isStatic: true
+    }
+ground = Bodies.rectangle(200,100,50,50);
+World.add(world,ground);
+console.log(ground.type);
+console.log(ground.position.x);
+console.log(ground.position.y);    
 }
   
   function draw() {
     background(0);  
     rectMode(CENTER);
-    rect(object.position.x,object.position.y,50,50);
+    rect(ground.position.x,ground.position.y,50,50);
 }
