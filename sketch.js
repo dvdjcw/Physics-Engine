@@ -19,5 +19,5 @@ console.log(object.position.y);
   function draw() {
     background(0);  
     rectMode(CENTER);
-    rect(200,200,50,50);
+    rect(object.position.x,object.position.y,50,50);
 }
